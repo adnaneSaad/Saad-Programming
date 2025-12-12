@@ -51,6 +51,6 @@ elif Q5 == "No":
     tech = tech
 
 
-print(f"Scientific = "{scientific})
-print(f"Languistic = "{languistic})
-print(f"tech = "{tech})
+print(f"Scientific = {scientific}")
+print(f"Languistic = {languistic}")
+print(f"tech = {tech}")
