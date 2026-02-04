@@ -1,14 +1,14 @@
+#!/usr/bin/env python3
 from tkinter import *
 from tkinter import ttk
 
 root = Tk()
 root.title("Smart Orientation Assistant")
 root.geometry("450x750")      # width x height
-<<<<<<< HEAD
-root.resizable(True, True)  # lock resizing
-=======
-root.resizable(False, False)  # lock resizing
 
+root.resizable(True, True)  # lock resizing
+
+root.resizable(False, False)  # lock resizing
 #====================================================================================================================================================================#
 Title = Label(root, text="Hello, this is Smart Orientation Assistant!!", fg="blue")
 Title.grid(row=0, column=0)
