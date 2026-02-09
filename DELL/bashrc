@@ -1,0 +1,60 @@
+# .bashrc
+
+# --- 1. SYSTEM DEFAULTS (Fedora) ---
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment and startup programs
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+# --- 2. INTERACTIVE SESSION CHECK ---
+case $- in
+    *i*) ;;
+    *) return ;;
+esac
+
+# --- 3. BASH-IT CONFIGURATION ---
+export BASH_IT="/home/saad/.bash_it"
+export BASH_IT_THEME='' # We use our own PS1 below
+unset MAILCHECK
+export IRC_CLIENT='irssi'
+export TODO="t"
+
+# Load Bash-it logic
+if [ -f "${BASH_IT}/bash_it.sh" ]; then
+    source "${BASH_IT}/bash_it.sh"
+fi
+
+# --- 4. CUSTOM PROMPT SETUP ---
+# Remove any conflicting prompt engines
+unset PROMPT_COMMAND
+
+# Function to safely display git branch
+parse_git_branch() {
+    local branch
+    # The space before 2>/dev/null is critical to avoid "fatal" errors
+    branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    if [[ -n "$branch" ]]; then
+        echo " ($branch)"
+    fi
+}
+
+# The Layout: |saad|fedora| ~/Programs (branch) → 
+# Note: the \$ ensures the function runs every time you run a command
+export PS1="|\[\e[1;34m\]\u\[\e[0m\]|\[\e[1;32m\]\h\[\e[0m\]| \[\e[1;33m\]\w\[\e[1;36m\]\$(parse_git_branch)\n\[\e[1;34m\]══❯ \[\e[0m\]"
+
+# Show fastfetch on terminal start
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi
+alias kate-update='sudo dnf5 update kate'
+alias 0='cd ~'
+alias 1='cd Programs/'
+alias bashrc='vim ~/.bashrc'
+alias desktop-files='cd ~/.local/share/applications'
+alias bashrc-update='source ~/.bashrc'
+alias git-update='git add . && git commit -m "Auto-update $(date +"%Y-%m-%d %H:%M:%S")" 2>/dev/null || echo "Nothing to commit" && git pull --rebase && git push'
+alias files-desktop-files='nautilus ~/.local/share/applications'
+alias refresh='nautilus -q && nautilus &'
