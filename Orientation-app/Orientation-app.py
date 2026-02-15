@@ -9,7 +9,7 @@ root.title("Saad's Orientation Assistant")
 MainLabel1 = tk.Label(root, text = "Welcome to Saad's Orientation app for 2AC!", font=("Arial", 16, "bold") ,foreground="Blue")
 MainLabel1.pack()
 
-MainLabel2 = tk.Label(root, text = "Write down your marks to see which orientation is best for you", font=("Arial", 12), pady=10)
+MainLabel2 = tk.Label(root, text = "Write down your marks to see which orientation is best for you", font=("Arial", 12), pady = 10)
 MainLabel2.pack()
 #==========================================================================================================================================#
 Frame = ttk.Frame(root)
@@ -70,30 +70,44 @@ Label9.grid(row = 9, column = 0, sticky = "w", padx = 10, pady = 10)
 Entry9 = ttk.Entry(Frame)
 Entry9.grid(row = 9, column = 1, sticky = "w", padx = 10, pady = 10)
 #==========================================================================================================================================#
-
-#==========================================================================================================================================#
 def Submit():
     global Physics, HistGeo, ICT, EduIslamique, English, Arabic, French, Maths, SVT
 
-    Physics           = Entry1.get()
-    HistGeo           = Entry2.get()
-    ICT               = Entry3.get()
-    EduIslamique      = Entry4.get()
-    English           = Entry5.get()
-    Arabic            = Entry6.get()
-    French            = Entry7.get()
-    Maths             = Entry8.get()
-    SVT               = Entry9.get()
+    Physics           = float (Entry1.get())
+    HistGeo           = float (Entry2.get())
+    ICT               = float (Entry3.get())
+    EduIslamique      = float (Entry4.get())
+    English           = float (Entry5.get())
+    Arabic            = float (Entry6.get())
+    French            = float (Entry7.get())
+    Maths             = float (Entry8.get())
+    SVT               = float (Entry9.get())
 
-    TotalPhysics      = 0
-    TotalHistGeo      = 0
-    TotalICT          = 0
-    TotalEduIslamique = 0
-    TotalEnglish      = 0
-    TotalArabic       = 0
-    TotalFrench       = 0
-    TotalMaths        = 0
-    TotalSVT          = 0
+    AuthenticEducation = (Physics * 0) + (HistGeo * 3) + (ICT * 2) + (EduIslamique * 4) + (English * 2) + (Arabic * 4) + (French * 3) + (Maths * 2) + (SVT * 2)
+
+    ArtsAndHumanities  = (Physics * 0) + (HistGeo * 4) + (ICT * 2) + (EduIslamique * 0) + (English * 3) + (Arabic * 4) + (French * 4) + (Maths * 2) + (SVT * 2)
+
+    ScientificTrunk    = (Physics * 4) + (HistGeo * 2) + (ICT * 2) + (EduIslamique * 0) + (English * 3) + (Arabic * 2) + (French * 3) +      (Maths * 4) + (SVT * 4)
+
+    TechnologicalStump = (Physics * 4) + (HistGeo * 2) + (ICT * 3) + (EduIslamique * 0) + (English * 3) + (Arabic * 2) + (French * 3) + (Maths * 4) + (SVT * 0)
+
+    Best = max(AuthenticEducation, ArtsAndHumanities, ScientificTrunk, TechnologicalStump)
+
+    if (Best == AuthenticEducation):
+        BestLabel = ttk.Label(Frame, text = "The Best Orientation For You is: 'Authentic Education'", font = ("Arial", 13))
+        BestLabel.grid(row = 11, column = 0, padx = 15, pady = 15)
+
+    elif(Best == ArtsAndHumanities):
+        BestLabel = ttk.Label(Frame, text = "The Best Orientation For You is: 'Arts And Humanities'", font = ("Arial", 13))
+        BestLabel.grid(row = 11, column = 0, padx = 15, pady = 15)
+
+    elif(Best == ScientificTrunk):
+        BestLabel = ttk.Label(Frame, text = "The Best Orientation For You is: 'Scientific Trunk'", font = ("Arial", 13))
+        BestLabel.grid(row = 11, column = 0, padx = 15, pady = 15)
+
+    elif(Best == TechnologicalStump):
+        BestLabel = ttk.Label(Frame, text = "The Best Orientation For You is: 'Technological Stump'", font = ("Arial", 13))
+        BestLabel.grid(row = 11, column = 0, padx = 15, pady = 15)
 #==========================================================================================================================================#
 SubmitButton = tk.Button(Frame, text = "Submit", bg = "gray", command = Submit)
 SubmitButton.grid(row = 10, column = 0, columnspan = 2, pady = 10)
