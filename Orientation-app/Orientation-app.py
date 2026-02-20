@@ -128,10 +128,13 @@ def Submit():
 
     Best = max(AuthenticEducation, ArtsAndHumanities, ScientificTrunk, TechnologicalStump)
 
-    AuthenticEducationPercent = (AuthenticEducation) / 9
-    ArtsAndHumanitiesPercent  = (ArtsAndHumanities  / 420) * 100
-    ScientificTrunkPercent    = (ScientificTrunk    / 480) * 100
-    TechnologicalStumpPercent = (TechnologicalStump / 420) * 100
+    TotalScore = AuthenticEducation + ArtsAndHumanities + ScientificTrunk + TechnologicalStump
+
+    AuthenticEducationPercent = (AuthenticEducation / TotalScore) * 100
+    ArtsAndHumanitiesPercent  = (ArtsAndHumanities  / TotalScore) * 100
+    ScientificTrunkPercent    = (ScientificTrunk    / TotalScore) * 100
+    TechnologicalStumpPercent = (TechnologicalStump / TotalScore) * 100
+
     if (Best == AuthenticEducation):
         best_orientation = "Authentic Education"
 
@@ -145,13 +148,12 @@ def Submit():
         best_orientation = "Technological Stump"
 
     messagebox.showinfo(
-        "Analysis Results",
+        "Analysis Results",        f"hehe {AuthenticEducationPercent}"
         f"The Best Orientation For You is: {best_orientation}\n\n"
         f"Authentic Education: {AuthenticEducationPercent:.0f}%\n"
         f"Arts And Humanities: {ArtsAndHumanitiesPercent:.0f}%\n"
         f"Scientific Trunk: {ScientificTrunkPercent:.0f}%\n"
         f"Technological Stump: {TechnologicalStumpPercent:.0f}%\n"
-        f"hehe {AuthenticEducationPercent}"
         )
     marks = {
     "Physics": Physics,
@@ -173,4 +175,3 @@ SubmitButton.grid(row = 2025, column = 0, columnspan = 2, pady = 10)
 #==========================================================================================================================================#
 root.mainloop()
 # This last line is important for that the app runs well and normally
-print(AuthenticEducation)

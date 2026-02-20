@@ -7,6 +7,6 @@ English: 20.0
 Arabic: 20.0
 French: 20.0
 Maths: 20.0
-SVT: 20.0
-Best Orientation: Scientific Trunk
+SVT: 0.0
+Best Orientation: Technological Stump
 
