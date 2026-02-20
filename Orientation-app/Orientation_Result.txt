@@ -1,0 +1,12 @@
+=== Here Are Your Marks And Your Best Orientation! ===
+Physics: 1.0
+Hist.Geo: 2.0
+ICT: 3.0
+Edu.Islamique: 5251451.0
+English: 5.0
+Arabic: 6.0
+French: 7.0
+Maths: 8.0
+SVT: 6522.0
+Best Orientation: Authentic Education
+
