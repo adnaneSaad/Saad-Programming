@@ -127,7 +127,9 @@ def Submit():
     TechnologicalStump = (Physics * 4) + (HistGeo * 2) + (ICT * 3) + (EduIslamique * 0) + (English * 3) + (Arabic * 2) + (French * 3) + (Maths * 4) + (SVT * 0)
 
     Best = max(AuthenticEducation, ArtsAndHumanities, ScientificTrunk, TechnologicalStump)
-
+#ScientificTrunk: 480; TechnologicalStump: 420
+    AuthenticEducationPercent = (AuthenticEducation / 440) * 100
+    ArtsAndHumanitiesPercent  = (ArtsAndHumanities / 420)  * 100
     if (Best == AuthenticEducation):
         best_orientation = "Authentic Education"
 
