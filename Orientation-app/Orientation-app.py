@@ -122,14 +122,16 @@ def Submit():
 
     ArtsAndHumanities  = (Physics * 0) + (HistGeo * 4) + (ICT * 2) + (EduIslamique * 0) + (English * 3) + (Arabic * 4) + (French * 4) + (Maths * 2) + (SVT * 2)
 
-    ScientificTrunk    = (Physics * 4) + (HistGeo * 2) + (ICT * 2) + (EduIslamique * 0) + (English * 3) + (Arabic * 2) + (French * 3) +      (Maths * 4) + (SVT * 4)
+    ScientificTrunk    = (Physics * 4) + (HistGeo * 2) + (ICT * 2) + (EduIslamique * 0) + (English * 3) + (Arabic * 2) + (French * 3) + (Maths * 4) + (SVT * 4)
 
     TechnologicalStump = (Physics * 4) + (HistGeo * 2) + (ICT * 3) + (EduIslamique * 0) + (English * 3) + (Arabic * 2) + (French * 3) + (Maths * 4) + (SVT * 0)
 
     Best = max(AuthenticEducation, ArtsAndHumanities, ScientificTrunk, TechnologicalStump)
-#ScientificTrunk: 480; TechnologicalStump: 420
-    AuthenticEducationPercent = (AuthenticEducation / 440) * 100
-    ArtsAndHumanitiesPercent  = (ArtsAndHumanities / 420)  * 100
+
+    AuthenticEducationPercent = (AuthenticEducation) / 9
+    ArtsAndHumanitiesPercent  = (ArtsAndHumanities  / 420) * 100
+    ScientificTrunkPercent    = (ScientificTrunk    / 480) * 100
+    TechnologicalStumpPercent = (TechnologicalStump / 420) * 100
     if (Best == AuthenticEducation):
         best_orientation = "Authentic Education"
 
@@ -142,9 +144,15 @@ def Submit():
     elif(Best == TechnologicalStump):
         best_orientation = "Technological Stump"
 
-    BestLabel = ttk.Label(Frame, text = f"The Best Orientation For You is: {best_orientation}", font = ("Arial", 13))
-    BestLabel.grid(row = 2026, column = 0, padx = 15, pady = 15)
-
+    messagebox.showinfo(
+        "Analysis Results",
+        f"The Best Orientation For You is: {best_orientation}\n\n"
+        f"Authentic Education: {AuthenticEducationPercent:.0f}%\n"
+        f"Arts And Humanities: {ArtsAndHumanitiesPercent:.0f}%\n"
+        f"Scientific Trunk: {ScientificTrunkPercent:.0f}%\n"
+        f"Technological Stump: {TechnologicalStumpPercent:.0f}%\n"
+        f"hehe {AuthenticEducationPercent}"
+        )
     marks = {
     "Physics": Physics,
     "Hist.Geo": HistGeo,
@@ -165,3 +173,4 @@ SubmitButton.grid(row = 2025, column = 0, columnspan = 2, pady = 10)
 #==========================================================================================================================================#
 root.mainloop()
 # This last line is important for that the app runs well and normally
+print(AuthenticEducation)
