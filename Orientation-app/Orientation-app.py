@@ -141,7 +141,7 @@ def Submit():
         best_orientation = "Technological Stump"
 
     BestLabel = ttk.Label(Frame, text = f"The Best Orientation For You is: {best_orientation}", font = ("Arial", 13))
-    BestLabel.grid(row = 11, column = 0, padx = 15, pady = 15)
+    BestLabel.grid(row = 12, column = 0, padx = 15, pady = 15)
 
     marks = {
     "Physics": Physics,
