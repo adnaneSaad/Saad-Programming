@@ -141,7 +141,7 @@ def Submit():
         best_orientation = "Technological Stump"
 
     BestLabel = ttk.Label(Frame, text = f"The Best Orientation For You is: {best_orientation}", font = ("Arial", 13))
-    BestLabel.grid(row = 12, column = 0, padx = 15, pady = 15)
+    BestLabel.grid(row = 2026, column = 0, padx = 15, pady = 15)
 
     marks = {
     "Physics": Physics,
@@ -159,7 +159,7 @@ def Submit():
 #==========================================================================================================================================#
 # Creating the Submit button
 SubmitButton = tk.Button(Frame, text = "Submit", bg = "gray", command = Submit)
-SubmitButton.grid(row = 11, column = 0, columnspan = 2, pady = 10)
+SubmitButton.grid(row = 2025, column = 0, columnspan = 2, pady = 10)
 #==========================================================================================================================================#
 root.mainloop()
 # This last line is important for that the app runs well and normally
