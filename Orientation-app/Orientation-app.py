@@ -3,7 +3,7 @@
 # Upwards I'm just telling your PC to run this as a Python code "the first line isn't needed in Windows"
 # In the second line I'm adding support to imogies, french accents and arabic letters "in case I needed them"
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
 # first line is importing a library that I need and aliasing it as tk
 # And the second I'm importing ttk "Themed tkinter"
 
