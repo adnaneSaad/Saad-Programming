@@ -95,10 +95,14 @@ def save_to_file(result, marks):
     )
 
     with open(file_path, "w", encoding="utf-8") as file:
-        file.write("=== Here Are Your Marks And Your Best Orientation! ===\n")
+        file.write("=== Here Are Your Marks, Your Best Orientation And Percentages! ===\n")
         for subject, value in marks.items():
             file.write(f"{subject}: {value}\n")
         file.write(f"Best Orientation: {result}\n\n")
+        file.write(f"Authentic Education: {AuthenticEducationPercent}%\n")
+        file.write(f"Arts And Humanities: {ArtsAndHumanitiesPercent}%\n")
+        file.write(f"Scientific Trunk: {ScientificTrunkPercent}%\n")
+        file.write(f"Technological Stump: {TechnologicalStumpPercent}%\n")
 #===========================================================================================================================================#
 # Basically this is the core of the program "plus the last part" here, I'm grabbing user inputs, getting sure that the user had filled all entries with supported answers, counting the best Orientation, creating a label with it, and finally calling the saving mechanism whenever the user click that Submit button
 
@@ -148,7 +152,7 @@ def Submit():
         best_orientation = "Technological Stump"
 
     messagebox.showinfo(
-        "Analysis Results",        f"hehe {AuthenticEducationPercent}"
+        "Analysis Results",
         f"The Best Orientation For You is: {best_orientation}\n\n"
         f"Authentic Education: {AuthenticEducationPercent:.0f}%\n"
         f"Arts And Humanities: {ArtsAndHumanitiesPercent:.0f}%\n"
