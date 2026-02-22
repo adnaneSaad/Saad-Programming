@@ -171,7 +171,7 @@ def Submit():
 #==========================================================================================================================================#
 # Creating the Submit button
 SubmitButton = tk.Button(Frame, text = "Submit", bg = "gray", command = Submit)
-SubmitButton.grid(row = 2025, column = 0, columnspan = 2, pady = 10)
+SubmitButton.grid(row = 10, column = 0, columnspan = 2, pady = 10)
 #==========================================================================================================================================#
 root.mainloop()
 # This last line is important for that the app runs well and normally
