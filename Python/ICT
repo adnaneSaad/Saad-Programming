@@ -28,3 +28,7 @@ B.pack()
 
 
 root.mainloop()
+
+
+Page = tk.Tk()
+Page.title("Saad's Calculator")
