@@ -1,7 +1,7 @@
 # 🚩 Bandit Wargame Passwords
 
 |Level|Transition| Password                           |
-|:---:| :---     | :---                               |
+|:---:| :------: |  :------------------------------:  |
 | 0   | 0 -> 1   | `ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If` |
 | 1   | 1 -> 2   | `263JGJPfgU6LtdEvgfWU1XP5yac29mFx` |
 | 2   | 2 -> 3   | `MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx` |
@@ -23,3 +23,7 @@
 | 18  | 18 -> 19 | `cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8` |
 | 19  | 19 -> 20 | `0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO` |
 | 20  | 20 -> 21 | `EeoULMCra2q0dSkYj561DX7s1CpBuOBt` |
+| 21  | 21 -> 22 | `tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q` |
+| 22  | 22 -> 23 | `0Zf11ioIjMVN551jX3CmStKLYqjk54Ga` |
+| 23  | 23 -> 24 | `gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8` |
+| 24  | 24 -> 25 | `iCi86ttT4KSNe1armKiwbQNmB3YJP3q4` |

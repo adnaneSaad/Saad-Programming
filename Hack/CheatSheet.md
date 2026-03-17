@@ -72,3 +72,22 @@
 - **Command**: `./bandit20-do [cmd]`
 - **Power**: Executes the command as the owner (bandit20).
 - **Goal**: Read `/etc/bandit_pass/bandit20`.
+
+## Cron Jobs (Automation)
+- **Location**: `/etc/cron.d/`
+- **Goal**: Find scripts that run automatically and see where they save data.
+- **Tactic**: Read the `.sh` script to find the `/tmp/` file path where the password is hidden.
+
+## Hashed Filenames (Level 22 Recap)
+- **Concept**: Using a script to generate a dynamic filename based on a string.
+- **Tactic**: Reproduce the script's logic (`echo string | md5sum`) to find the hidden path.
+- **Note**: Ensure the "salt" (like 'I am user') matches the script exactly.
+
+## Network Brute-Forcing (Level 24 Recap)
+- **Problem**: PIN (0000-9999).
+- **The Script**:
+```bash
+for pin in {0000..9999}; do
+  echo "[PASS] $pin"
+done | nc localhost 30002
+```
