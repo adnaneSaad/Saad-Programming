@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+import subprocess
+import time
+
+target = "./level13"
+print(f"[*] Ghost-Hunting {target} on Fedora 43...")
+
+for key in range(256):
+    # Start the process with a clean pipe
+    p = subprocess.Popen([target], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    try:
+        # Send the key with a newline and give it more time to execute the shellcode
+        stdout, stderr = p.communicate(input=f"{key}\n", timeout=0.5)
+        
+        # Check for SUCCESS in the output
+        if "SUCCESS" in stdout:
+            print(f"\n[✔] GHOST SUMMONED! KEY: {key}")
+            print(f"Flag: {stdout.strip()}")
+            break
+            
+    except subprocess.TimeoutExpired:
+        p.kill()
+    except Exception:
+        continue
+
+    if key % 50 == 0:
+        print(f"Checking keys... current: {key}", end="\r")
+
+print("\n[*] Scan complete.")
