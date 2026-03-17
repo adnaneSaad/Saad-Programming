@@ -51,3 +51,24 @@
 - Disguise a key for GitHub: `base64 [file] > [file].b64`
 - Restore the key: `base64 -d [file].b64 > [file]`
 - Why: GitHub scanners look for PEM headers; Base64 hides them.
+
+## File Comparison (Level 17)
+- Find differences between two files: `diff file1 file2`
+- `<` means the line is only in the first file.
+- `>` means the line is only in the second file (the new password).
+
+## OverTheWire Rules
+- SSH from localhost is blocked: Always SSH from your local machine (Fedora) to reach the next level.
+
+## Remote Command execution (Level 18 Bypass)
+- Read a file without a stable shell: `ssh user@host -p [port] "cat [filename]"`
+
+## SetUID Binaries (Level 19)
+- **Identification**: Look for the `s` in permissions (e.g., `-rwsr-x---`).
+- **Mechanism**: The program runs with the **Effective UID** (authority) of the owner, not the person running it.
+- **Example**: `./bandit20-do [command]` lets you act as Bandit 20.
+
+## SetUID Execution (Level 19)
+- **Command**: `./bandit20-do [cmd]`
+- **Power**: Executes the command as the owner (bandit20).
+- **Goal**: Read `/etc/bandit_pass/bandit20`.
