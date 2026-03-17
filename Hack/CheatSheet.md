@@ -91,3 +91,8 @@ for pin in {0000..9999}; do
   echo "[PASS] $pin"
 done | nc localhost 30002
 ```
+
+## SUID Binaries (Level 26 Recap)
+- **Concept**: A file (like bandit27-do) that runs with the permissions of its owner, not the person running it.
+- **Tactic**: Use the binary to execute commands (like 'cat') on files your current user normally can't see.
+- **Example**: \`./bandit27-do cat /etc/bandit_pass/bandit27\`
