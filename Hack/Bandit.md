@@ -27,3 +27,5 @@
 | 22  | 22 -> 23 | `0Zf11ioIjMVN551jX3CmStKLYqjk54Ga` |
 | 23  | 23 -> 24 | `gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8` |
 | 24  | 24 -> 25 | `iCi86ttT4KSNe1armKiwbQNmB3YJP3q4` |
+| 25  | 25 -> 26 | `via bandit26.sshkey`              |
+| 26  | 26 -> 27 | `upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB` |
