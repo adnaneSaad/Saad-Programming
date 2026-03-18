@@ -1,5 +1,6 @@
 # Bandit Hackers Cheat Sheet
-
+## How to access bandit servers
+- Run this `ssh bandit25@bandit.labs.overthewire.org -p 2220`
 ## Compression
 - Gzip: `gunzip` (needs .gz extension)
 - Bzip2: `bzip2 -d` (needs .bz2 extension)
