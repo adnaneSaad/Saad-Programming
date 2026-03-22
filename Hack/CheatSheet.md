@@ -97,6 +97,7 @@ done | nc localhost 30002
 - **Concept**: A file (like bandit27-do) that runs with the permissions of its owner, not the person running it.
 - **Tactic**: Use the binary to execute commands (like 'cat') on files your current user normally can't see.
 - **Example**: \`./bandit27-do cat /etc/bandit_pass/bandit27\`
+
 # Switched to Hack The Box!
 ## 🔍 Phase 1: Recon (Finding the Door)
 | Command | What it does |
