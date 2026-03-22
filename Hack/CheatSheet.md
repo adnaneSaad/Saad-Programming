@@ -97,3 +97,30 @@ done | nc localhost 30002
 - **Concept**: A file (like bandit27-do) that runs with the permissions of its owner, not the person running it.
 - **Tactic**: Use the binary to execute commands (like 'cat') on files your current user normally can't see.
 - **Example**: \`./bandit27-do cat /etc/bandit_pass/bandit27\`
+# Switched to Hack The Box!
+## 🔍 Phase 1: Recon (Finding the Door)
+| Command | What it does |
+| :--- | :--- |
+| `ping -c 4 [IP]` | Checks if the server is alive. |
+| `nmap -sV [IP]` | Scans for services (Telnet, SSH, FTP). |
+| `nmap -A [IP]` | Aggressive scan (OS and version details). |
+
+## 🔓 Phase 2: Entry (Picking the Lock)
+| Command | What it does |
+| :--- | :--- |
+| `telnet [IP]` | Connect to old login services (Try user: `root`). |
+| `ftp [IP]` | File Transfer (Try user: `anonymous`, no password). |
+| `ssh [user]@[IP]` | Secure login (The professional standard). |
+
+## 🚩 Phase 3: Post-Exploitation (Looting)
+| Command | What it does |
+| :--- | :--- |
+| `whoami` | Confirms if you are `root`. |
+| `ls -la` | Shows all files, including hidden ones. |
+| `cat flag.txt` | Reads the proof of capture. |
+| `get [file]` | (FTP Only) Downloads a file to your machine. |
+| `find / -name "*.txt" 2>/dev/null` | Deep search for passwords/flags. |
+
+## 🌐 Network Fixes
+* **No route to host?** Run `sudo openvpn [file].ovpn` in a separate tab.
+* **Using Pwnbox?** Use the terminal inside the browser window.
