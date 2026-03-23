@@ -29,3 +29,20 @@
 | 24  | 24 -> 25 | `iCi86ttT4KSNe1armKiwbQNmB3YJP3q4` |
 | 25  | 25 -> 26 | `via bandit26.sshkey`              |
 | 26  | 26 -> 27 | `upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB` |
+### HTB: Fawn
+- **Target IP:** 10.129.52.141
+- **Service:** FTP (Port 21)
+- **Access Method:** Anonymous Login
+- **Flag Captured:** 035db21c881520061c53e0536e44f815
+- **Date:** 2026-03-23
+
+---
+### HTB: Dancing
+- **Target IP:** 10.129.52.167
+- **Service:** SMB (Port 445)
+- **Access Method:** Null Session (-N) on WorkShares
+- **Flag Captured:** 
+- **Notes:** Found flag in James.P folder. Worknotes mention WinRM.
+- **Date:** 2026-03-23
+
+---

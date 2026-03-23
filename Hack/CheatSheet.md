@@ -125,3 +125,25 @@ done | nc localhost 30002
 ## 🌐 Network Fixes
 * **No route to host?** Run `sudo openvpn [file].ovpn` in a separate tab.
 * **Using Pwnbox?** Use the terminal inside the browser window.
+## [FTP] File Transfer Protocol - Port 21
+- **Scan:** `nmap -p 21 [IP]`
+- **Access:** `ftp [IP]`
+- **Common Credentials:** `anonymous` : `anonymous` or blank password.
+- **Commands:**
+  - `ls` : List files
+  - `get [file]` : Download file to your machine
+  - `put [file]` : Upload file to server
+  - `exit` or `bye` : Disconnect
+
+
+## [SMB] Server Message Block - Port 445
+- **Scan:** `nmap -p 445 [IP]`
+- **List Shares:** `smbclient -L [IP] -N`
+- **Connect:** `smbclient //[IP]/[ShareName] -N`
+- **Commands:**
+  - `ls` : List content
+  - `cd` : Change directory
+  - `get` : Download file
+  - `exit` : Close connection
+
+
