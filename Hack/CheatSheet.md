@@ -147,3 +147,20 @@ done | nc localhost 30002
   - `exit` : Close connection
 
 
+
+---
+## 🛠️ REDEEMER & REDIS TECHNICAL LOGIC (Updated 2026-03-25)
+
+### The "Filtered" Port Problem
+- **Status: Filtered** = The firewall is dropping your packets. 
+- **The Fix:** Ensure you are on the **Starting Point** VPN, not the "Main Lab" VPN. 
+- **The MTU Fix:** If the connection is still "choppy" from Casablanca, use `sudo ifconfig tun0 mtu 1200`.
+
+### Service Enumeration (The "What")
+- **Command:** `nmap -p 6379 -sV [IP]`
+- **-sV Flag:** This is the most important flag for the "Version" question in HTB. It forces the service to identify itself (e.g., Redis 5.0.7).
+
+### Tooling
+- **Utility Name:** `redis-cli` (or `valkey-cli` on Fedora).
+- **Default Port:** `6379`
+- **Protocol:** `TCP` (Connection-oriented, unlike UDP).

@@ -46,3 +46,28 @@
 - **Date:** 2026-03-23
 
 ---
+
+---
+## 🧭 NAVIGATING THE REDIS WAREHOUSE (The Bandit Way)
+
+### 1. The Entry (The Connection)
+$ redis-cli -h [TARGET_IP]
+
+### 2. Identifying the Aisle (Which DB?)
+- **Check the Warehouse Layout:** `INFO keyspace`
+  - *Look for "db0", "db1", etc. It tells you where the keys actually are.*
+- **Move to an Aisle:** `SELECT 0` (or 1, 2, etc.)
+
+### 3. Finding the Boxes (Keys)
+- **Show EVERYTHING:** `KEYS *`
+- **Pattern Search:** `KEYS flag*` (Finds: flag, flag1, flag_secret)
+- **Search for Users:** `KEYS *user*` (Finds: superuser, user_pass, newuser)
+
+### 4. Opening the Box (The Data)
+- **Read a String:** `GET [key_name]`
+- **Check the Type of Data:** `TYPE [key_name]` 
+  - *If it says "string", use GET. If it says "list", use LRANGE.*
+
+### 5. Cleaning Up
+- **Clear the Terminal:** `CLEAR` (within the redis-cli prompt)
+- **Exit:** `exit` or `QUIT`
