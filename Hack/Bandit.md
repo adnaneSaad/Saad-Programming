@@ -103,3 +103,19 @@ $ redis-cli -h [TARGET_IP]
 - **Flag:** 7b4bec00d1a39e3dd4e021ec3d915da8
 
 ✅ Sequel Machine: COMPLETED (2026-03-27)
+
+---
+## 🏆 HTB STARTING POINT LOG (March 2026)
+### 🗄️ Machine: Sequel
+- **IP:** 10.129.50.152
+- **Service:** MariaDB (Port 3306)
+- **Method:** Manual MySQL handshake (nmap hung).
+- **Flag:** 7b4bec00d1a39e3dd4e021ec3d915da8
+- **Status:** PWNED ✅
+
+### 🐊 Machine: Crocodile
+- **IP:** 10.129.52.226
+- **Service:** FTP (Port 21) & HTTP (Port 80)
+- **Method:** Anonymous FTP login -> Gobuster for /login.php -> Admin login.
+- **Flag:** c7110277ac44d78b6a9fff2232434d16
+- **Status:** PWNED ✅
