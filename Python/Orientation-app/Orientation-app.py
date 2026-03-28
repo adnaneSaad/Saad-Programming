@@ -134,7 +134,9 @@ def Submit():
     ArtsAndHumanitiesPercent  = (ArtsAndHumanities  / TotalScore) * 100
     ScientificTrunkPercent    = (ScientificTrunk    / TotalScore) * 100
     TechnologicalStumpPercent = (TechnologicalStump / TotalScore) * 100
-
+    if (Physics > 20 or Physics < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
+    
     if (Best == AuthenticEducation):
         best_orientation = "Authentic Education"
 
@@ -146,7 +148,6 @@ def Submit():
 
     elif(Best == TechnologicalStump):
         best_orientation = "Technological Stump"
-
     messagebox.showinfo(
         "Analysis Results",
         f"The Best Orientation For You is: {best_orientation}\n\n"
