@@ -71,3 +71,35 @@ $ redis-cli -h [TARGET_IP]
 ### 5. Cleaning Up
 - **Clear the Terminal:** `CLEAR` (within the redis-cli prompt)
 - **Exit:** `exit` or `QUIT`
+
+---
+### HTB: Appointment
+- **Target IP:** 10.129.50.132
+- **Service:** HTTP (Port 80) / Apache 2.4.38
+- **Access Method:** SQL Injection (SQLi)
+- **Payload used:** ' OR 1=1 -- -
+- **Flag Captured:** e3d0796d002a446c0e622226f42e9672
+- **Date:** 2026-03-27
+- Task 10: The 'Success' message word is 'Congratulations'.
+
+---
+
+## 🛡️ Machine: Appointment (Tier 1 - Web)
+- **Vulnerability:** SQL Injection (SQLi)
+- **Method:** Used `' OR 1=1 -- -` to bypass the login form.
+- **Task 10:** The success message starts with 'Congratulations'.
+- **Flag:** e3d0796d002a446c0e622226f42e9672
+
+---
+
+## 🐬 Machine: Sequel (Tier 1 - Database)
+- **Vulnerability:** Misconfigured MySQL (No password for root).
+- **Service Port:** 3306 (Standard MySQL port).
+- **Access Command:** mysql -h [IP] -u root
+- **Workflow:** 1. SHOW DATABASES; -> htb
+    2. USE htb;
+    3. SHOW TABLES; -> config
+    4. SELECT * FROM config;
+- **Flag:** 7b4bec00d1a39e3dd4e021ec3d915da8
+
+✅ Sequel Machine: COMPLETED (2026-03-27)
