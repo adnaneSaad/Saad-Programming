@@ -313,4 +313,4 @@ done | nc localhost 30002
 ---
 ## Note
 - To do agressive scan run:
-- `nmap -p- --min-rate 5000 10.129.52.95`
+- `nmap -p- --min-rate 5000 [IP addr.]`
