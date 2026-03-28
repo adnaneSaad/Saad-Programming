@@ -314,3 +314,11 @@ done | nc localhost 30002
 ## Note
 - To do agressive scan run:
 - `nmap -p- --min-rate 5000 [IP addr.]`
+
+---
+## 🐊 CROCODILE LESSONS
+- **FTP Anonymous:** Always check Port 21 for 'anonymous' login.
+- **Hidden Doors:** If the website has no login, use Gobuster + common.txt.
+- **Extensions:** Use '-x php,html,txt' to find specific file types.
+- **Flag Location:** Usually behind an admin panel or a hidden directory.
+- **To check for files inside the website, run:** gobuster dir -u http://[IP] -w ~/Programs/Wordlists/common.txt -x php,html
