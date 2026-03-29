@@ -135,7 +135,6 @@ $ redis-cli -h [TARGET_IP]
 
 ## Captured Flags
 * **User Flag (Mike):** ea81b7afddd03efaa0945333ed147fac
-* **Root Flag (Admin):** (Paste your final Administrator flag here)
 
 ## Security Audit & Privilege Findings
 The machine was compromised via LLMNR poisoning. Post-exploitation revealed the following critical misconfigurations:
