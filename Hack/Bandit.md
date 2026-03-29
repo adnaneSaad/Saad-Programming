@@ -119,3 +119,31 @@ $ redis-cli -h [TARGET_IP]
 - **Method:** Anonymous FTP login -> Gobuster for /login.php -> Admin login.
 - **Flag:** c7110277ac44d78b6a9fff2232434d16
 - **Status:** PWNED ✅
+✅ 2026-03-28: Crocodile PWNED. Flag: c7110277ac44d78b6a9fff2232434d16
+# SESSION LOG: 2026-03-29
+
+## Target Information
+* **Target IP:** 10.129.54.184
+* **OS:** Windows 10/Server
+* **Status:** FULL COMPROMISE (Pwned)
+
+## Credentials & Access
+* **Captured User:** Mike
+* **Captured Admin:** Administrator
+* **Cracked Password:** badminton
+* **Access Method:** Evil-WinRM
+
+## Captured Flags
+* **User Flag (Mike):** ea81b7afddd03efaa0945333ed147fac
+* **Root Flag (Admin):** (Paste your final Administrator flag here)
+
+## Security Audit & Privilege Findings
+The machine was compromised via LLMNR poisoning. Post-exploitation revealed the following critical misconfigurations:
+* **SeDebugPrivilege:** Enabled (Allowed memory dumping/manipulation).
+* **SeImpersonatePrivilege:** Enabled (Vulnerable to token impersonation).
+* **SeBackupPrivilege:** Enabled (Allowed reading any file on disk).
+
+## Tools Used
+* Responder (on wlan0)
+* Hashcat (on NVIDIA T1200 GPU / Fedora 43)
+* Evil-WinRM
