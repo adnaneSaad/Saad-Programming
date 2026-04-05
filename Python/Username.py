@@ -5,7 +5,7 @@ from tkinter import messagebox, ttk
 root = tk.Tk()
 root.title("Username Length Check")
 root.geometry("250x150")
-L = tk.Label(root, text = "Enter Your Username!", fg = "blue", font = ("Arial", 16, "bold"))
+L = tk.Label(root, text = "Enter Your Name!", fg = "blue", font = ("Arial", 16, "bold"))
 L.pack(padx = 10, pady = 10)
 
 E = ttk.Entry(root)
