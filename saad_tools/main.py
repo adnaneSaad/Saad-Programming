@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# coding: utf-8
 import threading
 from saad_tools.utils import _run_backdoor, start_assistant
 
