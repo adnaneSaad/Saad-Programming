@@ -136,7 +136,22 @@ def Submit():
     TechnologicalStumpPercent = (TechnologicalStump / TotalScore) * 100
     if (Physics > 20 or Physics < 0):
         messagebox.showerror("Input Error", "Please put values between 0 and 20")
-    
+    elif (HistGeo > 20 or HistGeo < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
+    elif (ICT > 20 or ICT < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
+    elif (EduIslamique > 20 or EduIslamique < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
+    elif (English > 20 or English < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
+    elif (Arabic > 20 or Arabic < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
+    elif (French > 20 or French < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
+    elif (Maths > 20 or Maths < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
+    elif (SVT > 20 or SVT < 0):
+        messagebox.showerror("Input Error", "Please put values between 0 and 20")
     if (Best == AuthenticEducation):
         best_orientation = "Authentic Education"
 
