@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
+# diff <= 10 specialized...
 # Upwards I'm just telling your PC to run this as a Python code "the first line isn't needed in Windows"
 # In the second line I'm adding support to imogies, french accents and arabic letters "in case I needed them"
 import tkinter as tk
@@ -23,63 +24,63 @@ Frame = ttk.Frame(root)
 Frame.pack(pady = 20)
 
 
-Label1 = ttk.Label(Frame, text = "Physics:", font = ("Arial", 10))
+Label1 = ttk.Label(Frame, text = "Physics", font = ("Arial", 10, "bold"))
 Label1.grid(row = 1, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry1 = ttk.Entry(Frame)
 Entry1.grid(row = 1, column = 1, sticky = "w", padx = 10, pady = 10)
 
 
-Label2 = ttk.Label(Frame, text = "Hist.Geo:", font = ("Arial", 10))
+Label2 = ttk.Label(Frame, text = "Hist.Geo", font = ("Arial", 10, "bold"))
 Label2.grid(row = 2, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry2 = ttk.Entry(Frame)
 Entry2.grid(row = 2, column = 1, sticky = "w", padx = 10, pady = 10)
 
 
-Label3 = ttk.Label(Frame, text = "ICT:", font = ("Arial", 10))
+Label3 = ttk.Label(Frame, text = "ICT", font = ("Arial", 10, "bold"))
 Label3.grid(row = 3, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry3 = ttk.Entry(Frame)
 Entry3.grid(row = 3, column = 1, sticky = "w", padx = 10, pady = 10)
 
 
-Label4 = ttk.Label(Frame, text = "Edu.Islamique", font = ("Arial", 10))
+Label4 = ttk.Label(Frame, text = "Edu.Islamique", font = ("Arial", 10, "bold"))
 Label4.grid(row = 4, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry4 = ttk.Entry(Frame)
 Entry4.grid(row = 4, column = 1, sticky = "w", padx = 10, pady = 10)
 
 
-Label5 = ttk.Label(Frame, text = "English", font = ("Arial", 10))
+Label5 = ttk.Label(Frame, text = "English", font = ("Arial", 10, "bold"))
 Label5.grid(row = 5, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry5 = ttk.Entry(Frame)
 Entry5.grid(row = 5, column = 1, sticky = "w", padx = 10, pady = 10)
 
 
-Label6 = ttk.Label(Frame, text = "Arabic", font = ("Arial", 10))
+Label6 = ttk.Label(Frame, text = "Arabic", font = ("Arial", 10, "bold"))
 Label6.grid(row = 6, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry6 = ttk.Entry(Frame)
 Entry6.grid(row = 6, column = 1, sticky = "w", padx = 10, pady = 10)
 
 
-Label7 = ttk.Label(Frame, text = "French", font = ("Arial", 10))
+Label7 = ttk.Label(Frame, text = "French", font = ("Arial", 10, "bold"))
 Label7.grid(row = 7, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry7 = ttk.Entry(Frame)
 Entry7.grid(row = 7, column = 1, sticky = "w", padx = 10, pady = 10)
 
 
-Label8 = ttk.Label(Frame, text = "Maths", font = ("Arial", 10))
+Label8 = ttk.Label(Frame, text = "Maths", font = ("Arial", 10, "bold"))
 Label8.grid(row = 8, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry8 = ttk.Entry(Frame)
 Entry8.grid(row = 8, column = 1, sticky = "w", padx = 10, pady = 10)
 
 
-Label9 = ttk.Label(Frame, text = "SVT", font = ("Arial", 10))
+Label9 = ttk.Label(Frame, text = "SVT", font = ("Arial", 10, "bold"))
 Label9.grid(row = 9, column = 0, sticky = "w", padx = 10, pady = 10)
 
 Entry9 = ttk.Entry(Frame)
