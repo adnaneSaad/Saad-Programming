@@ -1,0 +1,12 @@
+=== Here Are Your Marks And Your Best Orientation! ===
+Physics: 18.0
+Hist.Geo: 19.0
+ICT: 0.0
+Edu.Islamique: 15.0
+English: 20.0
+Arabic: 17.0
+French: 18.0
+Maths: 15.0
+SVT: 16.0
+Best Orientation: Scientific Trunk
+

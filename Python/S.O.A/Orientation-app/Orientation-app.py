@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # coding: utf-8
-# diff <= 10 specialized...
 # Upwards I'm just telling your PC to run this as a Python code "the first line isn't needed in Windows"
 # In the second line I'm adding support to imogies, french accents and arabic letters "in case I needed them"
 import tkinter as tk
@@ -164,12 +163,22 @@ def Submit():
 
     elif(Best == TechnologicalStump):
         best_orientation = "Technological Stump"
-    if (abs(AuthenticEducationPercent - ArtsAndHumanitiesPercent) >= 10 or
-    abs(AuthenticEducationPercent - ScientificTrunkPercent) >= 10 or
-    abs(AuthenticEducationPercent - TechnologicalStumpPercent) >= 10 or
-    abs(ArtsAndHumanitiesPercent - ScientificTrunkPercent) >= 10 or
-    abs(ArtsAndHumanitiesPercent - TechnologicalStumpPercent) >= 10 or
-    abs(ScientificTrunkPercent - TechnologicalStumpPercent) >= 10):
+    if (abs(AuthenticEducationPercent - ArtsAndHumanitiesPercent) <= 10 or
+    abs(AuthenticEducationPercent - ScientificTrunkPercent) <= 10 or
+    abs(AuthenticEducationPercent - TechnologicalStumpPercent) <= 10 or
+    abs(ArtsAndHumanitiesPercent - ScientificTrunkPercent) <= 10 or
+    abs(ArtsAndHumanitiesPercent - TechnologicalStumpPercent) <= 10 or
+    abs(ScientificTrunkPercent - TechnologicalStumpPercent) <= 10):
+        messagebox.showinfo(
+            "Analysis Results",
+            f"The Best Orientation For You is: {best_orientation}\n\n"
+            f"Authentic Education: {AuthenticEducationPercent:.0f}%\n"
+            f"Arts And Humanities: {ArtsAndHumanitiesPercent:.0f}%\n"
+            f"Scientific Trunk: {ScientificTrunkPercent:.0f}%\n"
+            f"Technological Stump: {TechnologicalStumpPercent:.0f}%\n\n"
+            f"Note: Percentages are close, it is way better to ask your teacher for your best orientation !\n"
+            )
+    else:
         messagebox.showinfo(
             "Analysis Results",
             f"The Best Orientation For You is: {best_orientation}\n\n"
@@ -177,16 +186,7 @@ def Submit():
             f"Arts And Humanities: {ArtsAndHumanitiesPercent:.0f}%\n"
             f"Scientific Trunk: {ScientificTrunkPercent:.0f}%\n"
             f"Technological Stump: {TechnologicalStumpPercent:.0f}%\n"
-            f"Note: Percentages are close, it is way better to ask your teacher for your best orientation!"
             )
-    messagebox.showinfo(
-        "Analysis Results",
-        f"The Best Orientation For You is: {best_orientation}\n\n"
-        f"Authentic Education: {AuthenticEducationPercent:.0f}%\n"
-        f"Arts And Humanities: {ArtsAndHumanitiesPercent:.0f}%\n"
-        f"Scientific Trunk: {ScientificTrunkPercent:.0f}%\n"
-        f"Technological Stump: {TechnologicalStumpPercent:.0f}%\n"
-        )
     marks = {
     "Physics": Physics,
     "Hist.Geo": HistGeo,
