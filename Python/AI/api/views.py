@@ -15,7 +15,7 @@ def get_data(request):
     # This is your simple HTML structure
     html = f"""
     <html>
-        <body style="font-family: 'Segoe UI', sans-serif; padding: 50px; background-color: #f4f4f9;">
+        <body style="font-family: 'Consolas bold', sans-serif; padding: 50px; background-color: #f4f4f9;">
             <h2 style="color: #333;">Project Report</h2>
             <table border="1" style="border-collapse: collapse; background-color: white; width: 400px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 {rows}
