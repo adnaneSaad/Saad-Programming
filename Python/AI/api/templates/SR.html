@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html>
  <head>
-<p> <h1> The SR 71 Blackbird </h1>
+  <head>
+    <style>
+        /* Force the font globally */
+        body {
+            font-family: 'Cascadia Code', 'Cascadia Mono', Consolas, monospace !important;
+            background-color: #fbf9f9 !important;
+            color: #030303 !important;
+        }
+
+        /* Explicit header sizing */
+        h1 { font-size: 30pt !important; font-weight: bold !important; color: #070707 !important; }
+        h2 { font-size: 26pt !important; font-weight: bold !important; color: #030303 !important; }
+        h3 { font-size: 20pt !important; font-weight: 600 !important; color: #060606 !important; }
+        h4 { font-size: 16pt !important; font-weight: normal !important; color: #010101 !important; }
+        h5 { font-size: 14pt !important; font-weight: normal !important; color: #000000 !important; }
+        h6 { font-size: 12pt !important; font-weight: normal !important; color: #0b0b0b !important; }
+
+        /* Paragraphs and Table styling */
+        p, td, th, li {
+            font-size: 14pt !important;
+        }
+        .force-white {
+        color: #ffffff !important;
+    }
+    </style>
+</head>
+<p> <h1> The SR-71 Blackbird </h1>
 <img src=
 https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Lockheed_SR-71_Blackbird.jpg/330px-Lockheed_SR-71_Blackbird.jpg
 width = "500" > </p>
@@ -55,18 +81,43 @@ successor, the SR-72, with plans to fly it in 2025.
      <h3> Manufacturer:</h3>	Lockheed Corporation <br>
      <h3> Designer:</h3> Lockheed Skunk Works 
           <strong> Clarence "Kelly" Johnson (Designer) </strong>
-     <h3> Primary users:</h3> 
-          <ul>	<li> States Air Force (historical) </li>
-          <li> NASA (historical) </li> </ul>
-     <h3> Number built:</h3>	32
+    <table style="width: 100%; border-collapse: collapse; color: #ffffff; background-color: #1a1a1a; margin-bottom: 20px;">
+    <tr style="background-color: #333;">
+        <th style="padding: 10px; border: 1px solid #555; color: #ffffff; background-color: #898888;">Primary User</th>
+        <th style="padding: 10px; border: 1px solid #555; color: #ffffff; background-color: #898888;">Status</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #555; color: #ffffff;">US Air Force</td>
+        <td style="padding: 10px; border: 1px solid #555; color: #ffffff;">Historical</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #555; color: #ffffff;">NASA</td>
+        <td style="padding: 10px; border: 1px solid #555; color: #ffffff;">Historical</td>
+    </tr>
+    </table>
+    <table style="width: 100%; border-collapse: collapse; color: #ffffff; background-color: #1a1a1a; margin-bottom: 20px;">
+    <tr style="background-color: #333;">
+        <th style="padding: 10px; border: 1px solid #555; color: #ffffff; background-color: #898888;">Organization</th>
+        <th style="padding: 10px; border: 1px solid #555; color: #ffffff; background-color: #898888;">Retirement Dates</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #555; color: #ffffff;">USAF</td>
+        <td style="padding: 10px; border: 1px solid #555; color: #ffffff;">1989 (temp.), 1998 (final)</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #555; color: #ffffff;">NASA</td>
+        <td style="padding: 10px; border: 1px solid #555; color: #ffffff;">1999</td>
+    </tr>
+</table>
    </p>
+    <p>
+     <h3> Number built:	32
+    </p>
    <p>
      <h1> History </h1>
      <h3> Introduction date: </h3>	January 1966
      <h3> First flight: </h3> 	22 December 1964
-     <h3> Retired:	</h3> 
-          <ul> <li> USAF: 1989 (temp.), 1998 (final) </li>
-          <li> NASA: 1999 </li> </ul>
+     
      <h3> Developed from: </h3>	Lockheed A-12
    </p>
    <p>
@@ -338,9 +389,9 @@ flow was 36,000 lb/h (16,000 kg/h). Flying in colder temperatures (known
  temperature, and for the engine, it varies with the direct inverse.
    </p>
 <div style="background: #1a1a1a; color: white; padding: 20px; border-radius: 10px; margin-top: 30px;">
-   <h2>The Future: SR-72 Concept</h2>
+     <h2 class="force-white">The Future: SR-72 Concept</h2>
     <p>As the SR-71 stands as the pinnacle of 20th-century reconnaissance, Lockheed Martin continues to develop concepts for high-speed, unmanned platforms.</p>
-    <p><strong>Status:</strong> Concept Development</p>
+     <div style="color: aqua;"> <p><strong>Status:</strong> </p> </div> Concept Development</p>
     <p>The SR-72 is intended to build upon the lessons learned from the Blackbird, aiming for a new era of hypersonic capability.
       This legendary UAV can reach an operational speed of Mach 6, and a max speed of Mach 10, making it a formidable successor to the SR-71. 
       The SR-72 is envisioned to perform both reconnaissance and strike missions, 

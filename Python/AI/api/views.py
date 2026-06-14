@@ -4,4 +4,4 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def sr71_view(request):
-    return render(request, 'SR-71.html')
+    return render(request, 'SR.html')
