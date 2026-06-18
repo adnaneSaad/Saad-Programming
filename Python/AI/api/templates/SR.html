@@ -3,14 +3,14 @@
 
 <head>
   <style>
-    /* Force the font globally */
+    /* Force the font I want*/
     body {
       font-family: 'Cascadia Code', 'Cascadia Mono', Consolas, monospace;
       background-color: #fbf9f9;
       color: #030303;
     }
 
-    /* Explicit header sizing */
+    /* Header sizing */
     h1 {
       font-size: 30pt;
       font-weight: bold;
@@ -55,10 +55,6 @@
       font-size: 14pt;
     }
 
-    .force-white {
-      color: #ffffff;
-    }
-
     :root {
       --bg-color: #ffffff;
       --text-color: #000000;
@@ -94,11 +90,6 @@
     table {
       background-color: var(--table-bg);
       color: var(--text-color);
-    }
-
-    /* Exception: Keep the SR-72 Concept header white even in light mode */
-    .force-white {
-      color: #ffffff;
     }
 
     /* The container for the switch */
@@ -142,14 +133,11 @@
       border-radius: 50%;
     }
 
-    /* Color when checked (Dark Mode) */
-    input:checked+.slider {
-      background-color: #333;
-    }
-
-    /* Move circle when checked */
     input:checked+.slider:before {
+      background-color: #333;
+      /* The circle changes color */
       transform: translateX(26px);
+      /* The circle moves */
     }
 
     .theme-container {
@@ -612,8 +600,25 @@
     </div>
   </div>
   <script>
+    // 1. Check local storage on page load
+    const currentTheme = localStorage.getItem("theme");
+    const toggle = document.getElementById("theme-toggle");
+
+    if (currentTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      toggle.checked = true; // Make sure the switch looks "on"
+    }
+
+    // 2. The toggle function
     function toggleTheme() {
       document.body.classList.toggle("dark-mode");
+
+      // Save the state to localStorage
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
     }
   </script>
 </body>
